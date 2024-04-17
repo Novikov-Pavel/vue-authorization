@@ -25,16 +25,16 @@
 ## Built With
 
 <a href="https://www.typescriptlang.org/">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" height="40px" width="40px" alt="Typescript" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" height="40px" width="40px" alt="Typescript" />
 </a>
 <a href="https://v3.ru.vuejs.org/ru/">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" height="40px" width="40px" alt="Vue" />
 </a>
 <a href="https://sass-lang.com/">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" height="40px" width="40px" alt="SASS" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" height="40px" width="40px" alt="SCSS" />
 </a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" height="40px" width="40px" alt="HTML" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" height="40px" width="40px" alt="HTML" />
 </a>
 
 ## Getting Started
@@ -58,7 +58,7 @@
 
 ## Contacts
 
-<a href="https://t.me/react_jobfrontend/">
+<a href="https://t.me/novikov_jobfrontend/">
   <img src="https://img.shields.io/badge/telegram-26A5E4.svg?&style=for-the-badge&logo=telegram&logoColor=white" height=28 width=110 />
 </a> 
 <a href="https://wa.me/79778129630/">
@@ -67,6 +67,6 @@
 <a href="https://www.linkedin.com/in/Novikoff-Pavel">
   <img src="https://img.shields.io/badge/linkedin-0A66C2.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height=28 width=110/>
 </a>
-<a href="mailto:react@jobfrontend.ru">
+<a href="mailto:novikov@jobfrontend.ru">
   <img alt="" src="https://static.tildacdn.com/tild3334-3665-4263-b964-373834323762/yan.png" height=28 width=110/>
 </a>

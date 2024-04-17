@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main :class="['flex-column']">
+  <p>1</p>    
+  <p>2</p>    
   </main>
 </template>

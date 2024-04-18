@@ -1,5 +1,5 @@
 <template>
-  <h2>Sign Up</h2>
+  <h2>Sign In</h2>
   <form class="flex flex-column gap-3">
     <Message v-if="authStore.error" severity="warn">{{ authStore.error }}</Message>
     <div class="p-inputgroup flex-1">
@@ -16,10 +16,10 @@
     </div>
     <Loader v-if="authStore.loader" />
     <div v-else class="flex flex-column gap-3">
-      <Button label="Signup" @click="signup" />
-      <span
-        >Are you already registered?
-        <router-link :to="route.signin">Sign in</router-link>
+      <Button label="Signin" @click="signin" />
+      <span>
+        Are you not registered yet?
+        <router-link :to="route.signup"> Sign up </router-link>
       </span>
     </div>
   </form>
@@ -27,14 +27,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAuthStore } from '@/stores/auth'
 import { useRouter } from 'vue-router'
+import { useAuthStore } from '@/stores/auth'
 import { route } from '@/router/types'
 
 import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
 import Message from 'primevue/message'
-import { Loader } from '@/components'
+import Loader from '@/components/Loader.vue'
 
 const authStore = useAuthStore()
 const router = useRouter()
@@ -42,8 +42,8 @@ const router = useRouter()
 const email = ref()
 const password = ref()
 
-const signup = async () => {
-  await authStore.auth({ email: email.value, password: password.value }, route.signup)
+const signin = async () => {
+  await authStore.auth({ email: email.value, password: password.value }, route.signin)
   router.push(route.cars)
 }
 </script>

@@ -14,12 +14,17 @@ export const useAuthStore = defineStore('auth', () => {
   const error = ref('')
   const loader = ref(false)
 
-  const auth = async (payload, type) => {
+  interface payloadI {
+    email: string
+    password: string
+  }
+
+  const auth = async (payload: payloadI, type: string) => {
     const stringUrl = type === 'signup' ? 'signUp' : 'signInWithPassword'
     error.value = ''
     loader.value = true
     try {
-      const response = await axiosApiInstance.post(
+      let response = await axiosApiInstance.post(
         `https://identitytoolkit.googleapis.com/v1/accounts:${stringUrl}?key=${apiKey}`,
         {
           ...payload,
@@ -40,23 +45,6 @@ export const useAuthStore = defineStore('auth', () => {
         })
       )
     } catch (err) {
-      switch (err?.response.data.error.message) {
-        case 'EMAIL_EXISTS':
-          error.value = 'Email exists'
-          break
-        case 'OPERATION_NOT_ALLOWED':
-          error.value = 'Operation not allowed'
-          break
-        case 'EMAIL_NOT_FOUND':
-          error.value = 'Email not found'
-          break
-        case 'INVALID_PASSWORD':
-          error.value = 'Invalid password'
-          break
-        default:
-          error.value = 'Error'
-          break
-      }
       throw error.value
     } finally {
       loader.value = false

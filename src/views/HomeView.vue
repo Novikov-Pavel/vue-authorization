@@ -1,9 +1,5 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <main :class="['flex-column']">
-  <p>1</p>    
-  <p>2</p>    
+  <main>
+    <h1>Home Page</h1>
   </main>
 </template>

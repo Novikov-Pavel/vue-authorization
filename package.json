@@ -7,10 +7,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@types/node": "^20.12.7",
     "axios": "^1.4.0",
     "firebase": "^9.22.1",
     "pinia": "^2.0.36",
@@ -23,11 +24,15 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
+    "@tsconfig/node18": "^18.2.4",
+    "@types/node": "^18.19.31",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/tsconfig": "^0.5.1",
     "dotenv": "^16.4.5",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
+    "gh-pages": "^6.1.1",
     "prettier": "^2.8.8",
     "vite": "^4.3.5"
   }
